@@ -1,0 +1,23 @@
+*.py[co]
+*.so
+*.c
+*.sw[op]
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+
+#big files
+libs/*
+Tests/*
+.rope*
+junks/*
