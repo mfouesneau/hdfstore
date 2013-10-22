@@ -18,20 +18,20 @@ Example usage
 import numpy as np
 #make a store
 with HDFStore('tmp.hd5', mode='w') as hd:
-#make some variables
-d = {}
-d['a'] = np.arange(10, dtype=float)
-d['b'] = np.arange(10, dtype='int')
-c = np.random.normal(0, 1, (10, 10))
-d['c'] = c
-#put values into the store
-hd['/subdir/table'] = d
-hd['/subdir1/array'] = c
-#check values
-print hd.keys()
-print hd['subdir/table']
-print hd['subdir1/array']
-hd.removeNode('/subdir1', recursive=True)
+  #make some variables
+  d = {}
+  d['a'] = np.arange(10, dtype=float)
+  d['b'] = np.arange(10, dtype='int')
+  c = np.random.normal(0, 1, (10, 10))
+  d['c'] = c
+  #put values into the store
+  hd['/subdir/table'] = d
+  hd['/subdir1/array'] = c
+  #check values
+  print hd.keys()
+  print hd['subdir/table']
+  print hd['subdir1/array']
+  hd.removeNode('/subdir1', recursive=True)
 ```
 
 API
