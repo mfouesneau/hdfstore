@@ -116,16 +116,16 @@ Any attribute of the HDF will be directly available transparently if the source 
 >>>`force`: `bool` (default: `False`)
 >>>>if set, bypass keep_open status
 >
-> ####def keys(self):
+> ####keys(self)
 >> Return a (potentially unordered) list of the keys corresponding to the objects stored in the HDFStore. These are ABSOLUTE path-names (e.g. have the leading '/'
 >
-> ####items(self):
+> ####items(self)
 >> iterator over the keys (groups)
 >
-> ####iteritems(self):
+> ####iteritems(self)
 >> iterator on the keys (groups)
 >
-> ####groups(self, where='/'):
+> ####groups(self, where='/')
 >> return a list of all the top-level nodes (that are not themselves a pandas storage object)
 >
 > ####write(self, data, group='/', tablename=None, append=False, silent=False, header={}, **kwargs)
@@ -153,33 +153,33 @@ Any attribute of the HDF will be directly available transparently if the source 
 >>>`header`: `dictionary` like
 >>>>attributes to add to the node
 >>
->> ####__getitem__(self, key):
+>> ####__getitem__(self, key)
 >>>Returns the node corresponding to the key
 >>
->> ####__setitem__(self, key, value):
+>> ####__setitem__(self, key, value)
 >>>create a node with the key path/name and set value as its content
 >>
->> ####__getattr__(self, name):
+>> ####__getattr__(self, name)
 >>>Give direct access to any function from self.source (tables.file.File)
 >>
->> ####__repr__(self):
+>> ####__repr__(self)
 >>> Object representation
 >>
->> ####__enter__(self):
+>> ####__enter__(self)
 >>> entering context
 >>
->> ####__exit__(self, exc_type, exc_val, exc_tb):
+>> ####__exit__(self, exc_type, exc_val, exc_tb)
 >>> closing context
->> ####__del__(self):
+>> ####__del__(self)
 >>> Destructor
 >>
 >>####__contains__(self, key)
 >>> check for existance of this key can match the exact pathname or the pathnm w/o the leading '/'
 >>
->> ####__len__(self):
+>> ####__len__(self)
 >> Returns the number of nodes in the root path
 >>
->> ####get_Q_from_node(self, nodename, expr, condvars={}, coordinates=None):
+>> ####get_Q_from_node(self, nodename, expr, condvars={}, coordinates=None)
 >>> returns a quantity from a HDF5 Node given its math expression. Assuming that all quantities are either from the node or in condvars
 >>>
 >>> attempt to be clever and optimizing speed when coordinates are provided
